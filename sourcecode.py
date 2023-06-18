@@ -1,15 +1,14 @@
-def Swap(a,i,j):
-    a[i],a[j] = a[j],a[i]
-def interchangeSort(a):
-    n = len(a)
-    for i in range(n-1):
-        for j in range(n):
-            if a[i]>a[j]:
-                Swap(a,i,j)
-def Show(a):
-    n = len(a)
-    for i in range(n):
-        print(a[i], end=' ')
-a = [2,3,5,7,4,2]
-interchangeSort(a)
-Show(a)
+import Sort as ss
+
+a = [2,3,5,302,7,4,2,10,20]
+ss.insertionSort(a)
+ss.Show(a)
+b=[3,231,43,54,765,3,2]
+ss.interchangeSort(b)
+ss.Show(b)
+c= [3,5,7,7,3,2,1,5]
+ss.selectionSort(c)
+ss.Show(c)
+d = [8,7,5,4,9,2,3,1]
+ss.bubbleSort(d)
+ss.Show(d)
