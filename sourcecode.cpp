@@ -6,7 +6,7 @@ int main()
     print(a, n);
     cout << endl;
     // InsertionSort(a, n);
-    SelectionSort(a, n);
+    insertionSort(a, n);
     print(a, n);
     return 0;
 }

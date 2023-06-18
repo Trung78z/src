@@ -6,7 +6,7 @@ void Swap(int *a, int *b)
     *a = *b;
     *b = tmp;
 }
-void InsertionSort(int *a, int n)
+void InterchangeSort(int *a, int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
@@ -20,7 +20,7 @@ void InsertionSort(int *a, int n)
     }
 }
 
-void SelectionSort(int *a, int n)
+void selectionSort(int *a, int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
@@ -33,6 +33,33 @@ void SelectionSort(int *a, int n)
             }
         }
         Swap(&a[i], &a[tmp]);
+    }
+}
+void bubbleSort(int *a, int n)
+{
+    for (int i = n - 1; i >= 0; i--)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (a[j - 1] > a[j])
+            {
+                Swap(&a[j], &a[j - 1]);
+            }
+        }
+    }
+}
+void insertionSort(int *a, int n)
+{
+    for (int i = 1; i < n; i++)
+    {
+        int pos = a[i];
+        int tmp = i;
+        while ((tmp > 0) && (a[tmp - 1]) > pos)
+        {
+            a[tmp] = a[tmp - 1];
+            tmp -= 1;
+        }
+        a[tmp] = pos;
     }
 }
 void print(int *a, int n)
